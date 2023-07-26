@@ -1,29 +1,20 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-
 <body>
-    <?php
-    require("./includes/dbconn.php")
-    ?>
-    <script>
-        // start session_abort
-
-        session_start();
-
-        // check if admin is logged in
-
-        const checkAdminLogin = () => {
-
-        }
-    </script>
-
+    <div class="container">
+        <h1> Welcome to User Dashboard</h1>
+    </div>
 </body>
-
-
 </html>

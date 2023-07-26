@@ -2,13 +2,21 @@ body {
     padding: 50px;
   }
   
-  .container {
+.container {
     max-width: 600px;
     margin: 0 auto;
     padding: 50px;
     box-shadow: rgba(100, 100, 111, 0.2);
   }
   
-  .form-group {
+.form-group {
     margin-bottom: 30px;
+  }
+
+.btn .btn-primary {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 20px;
   }
