@@ -1,0 +1,118 @@
+/* Global styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  /* padding: 20px; */
+  /* margin:auto; */
+  align-items: center;
+  justify-content: center;
+  /* margin: 10px; */
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(107, 46, 46);
+  border: 1px;;
+  border-color: brown;
+}
+
+/* Header styles */
+
+.navbar {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+/*
+.navbar-nav > li > a {
+  margin-right: 15px;
+  padding: 0;
+  display: inline-block;
+  justify-content:right;
+  color: #fff;
+}
+*/
+
+/* Jumbotron styles */
+
+.jumbotron {
+  background-color:whitesmoke;
+  color: rgb(107, 46, 46);
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Login panel styles */
+
+.panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.panel-heading {
+  background-color:white;
+  color:rgb(107, 46, 46);
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.panel-body {
+  padding: 20px;
+}
+
+/* Form styles */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color:black;
+  color: white;
+text-align:center;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color:rgb(107, 46, 46);
+  
+}
+
+/* Footer styles */
+
+.site-footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Miscellaneous styles */
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: red;
+}
+

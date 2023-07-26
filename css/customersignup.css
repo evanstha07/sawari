@@ -1,0 +1,18 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:auto;
+    background-color:whitesmoke;
+}
+.customersignupcontainer{
+    display: flex;
+    padding: 20px;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(107, 46, 46);
+    border: 1px;;
+    border-color: brown;
+}
+
