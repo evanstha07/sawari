@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,49 +9,42 @@
     <link rel="stylesheet" href="registration.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
 
+<body>
     <?php
+    require_once "dbconn.php";
+
     if (isset($_POST["Login"])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
-        require_once "dbconn.php";
 
-        
-        $sql = "SELECT * FROM users WHERE username = '$username'";
-        
+        $sql = "SELECT username,password FROM users WHERE username = '$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        if ($user){
-
-         if( password_verify($password, $user["password"])) {
-            header('Location: index.php');
+        if ($user) {
+            echo "<script>alert('Login Successful');window.location.href='./index.php'</script>";
             die();
-        }else {
+        } else {
             echo "<div class='alert alert-danger'> Invalid username or password</div>";
-        }   
-        }else {
-            echo "<div class='alert alert-danger'> Invalid username or password</div>";
-   
         }
+    } else {
+        echo "<div class='alert alert-danger'> Invalid username or password</div>";
     }
-    
-
     ?>
-
-    <form action="login.php" method="post">
-        <div class="form-group">
-            <input type="text" class="form-control" name="username" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password">
-        </div>
-        <div class="form-btn">
-            <input type="submit" class="btn btn-primary" value="Login" name="Login">
-        </div>
-    </form>
+    <div class="container">
+        <form action="" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="form-btn">
+                <button type="submit" class="btn btn-primary" name="Login">Login</button>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>
