@@ -8,24 +8,22 @@
 
 <body>
     <?php
-    require_once "../dbconn.php";
+    require "../dbconn.php";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $car_name = $_POST['car_name'];
-        $car_type = $_POST['car_type'];
         $brand = $_POST['brand'];
-        $isAvailable = $_POST['isAvailable'];
+        $car_type = $_POST['car_type'];
+        $model = $_POST['model'];
+        $year = $_POST['year'];
+        $price = $_POST['price'];
 
-        if (empty($car_name) || empty($car_type) || empty($brand) || empty($isAvailable)) {
-            die("Please fill in all required fields.");
-        }
+        // if (empty($car_name) || empty($brand) || empty($car_type) || empty($isAvailable) || empty($model) || empty($year) || empty($price)) {
+        //     die("Please fill in all required fields.");
+        // }
+        try {
+            $sql = mysqli_query($conn, "INSERT INTO cars (brand,car_type, model, year, price) VALUES ('$brand','$car_type','$model','$year', '$price')");
 
-        $sql = "INSERT INTO cars (car_name,car_type,brand, isAvailable) VALUES ('$car_name','$car_type','$brand','$isAvailable')";
-        $result = mysqli_query($conn, $sql);
-
-        if ($result) {
-            echo "Car reserved successfully.";
-        } else {
-            echo "Error reserving car";
+            echo "<script>alert('Car added successfully.');</script>";
+        } catch (Exception $e) {
         }
     }
     ?>
@@ -33,10 +31,7 @@
     <h1>Sawari Cars</h1>
     <div class="product-form">
         <form action="" method="POST">
-            <div class="form-group">
-                <label for="product_name">Car Name:</label>
-                <input type="text" id="car_name" name="car_name" placeholder="Enter product name" required>
-            </div>
+
             <div class="form-group">
                 <label for="brand">Brand:</label>
                 <select id="brand" name="brand">
@@ -58,22 +53,41 @@
                 </select>
             </div>
 
+
+
             <div class="form-group">
-                <label for="isAvailable">isAvailable:</label>
-                <select name="isAvailable" required id="isAvailable">
-                    <option value="1">Available</option>
-                    <option value="2">Not Available</option>
-                </select>
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" required>
             </div>
-            <!-- <div class="form-group">
+
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" min="1886" max="2099" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" min="0" step="0.01" required>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Add car">
+            </div>
+
+
+    </div>
+    <!-- <div class="form-group">
                 <label for="pickup-date">Pickup Date:</label>
                 <input type="date" id="pickup-date" name="pickubrand">
             </div>
             <div class="form-group">
                 <label for="return-date">Return Date:</label>
                 <input type="date" id="return-date" name="return_date"> -->
-            <!-- </div> -->
-            <!-- <div class="form-group">
+    <!-- </div> -->
+    <!-- <div class="form-group">
             <label for="customer-name">Name:</label>
             <input type="text" id="customer-name" name="customer_name" placeholder="Enter your name" required>
     </div>
@@ -90,10 +104,8 @@
         <input type="text" id="customer-address" name="customer_address" placeholder="Enter your address" required>
     </div> -->
 
-            <div class="form-group">
-                <button type="submit">Submit Reservation</button>
-            </div>
-        </form>
+
+    </form>
     </div>
 </body>
 
