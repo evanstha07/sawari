@@ -4,9 +4,9 @@ session_start();
 extract($_POST);
 
 if (isset($login)) {
-    $user = $_POST["user"];
-    $pass = $_POST["pass"];
-    $que = mysqli_query($mysqli, "SELECT * FROM admin WHERE user='$user' AND pass='$pass'");
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $que = mysqli_query($conn, "SELECT * FROM admin WHERE user='$user' AND pass='$pass'");
     $row = mysqli_num_rows($que);
     if ($row) {
         $_SESSION['admin'] = $user;
