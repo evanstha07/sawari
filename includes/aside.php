@@ -5,7 +5,7 @@
         <ul class="navbar-nav">
 
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link text-white-50">Home</a>
+                <a href="#" class="nav-link text-white-50">Admin Panel</a>
             </li>
             <!-- <li class="nav-item d-none d-sm-inline-block">
           <a href="../contact.php" class="nav-link">Contact</a>

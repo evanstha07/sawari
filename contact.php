@@ -30,17 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
 
-<!-- <?php include "./components/indexHeader.php"; ?> -->
-    
+    <?php include "./components/indexHeader.php"; ?>
 
     <div class="container">
+        <img src="./assets/img/Sawari.PNG" alt="Contact Image" class="contact-image">
         <h1>Get in touch</h1>
-        <img src="./assets/img/Sawari.PNG" alt="Contact Image" class="contact-image" >
+
         <?php if (isset($successMessage)) : ?>
             <p class="success"><?php echo $successMessage; ?></p>
         <?php endif; ?>
@@ -73,6 +74,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <!-- footer -->
+    <footer class=" pb-5">
+        <div class="footer">
+            <p class="font text-muted mb-0">&copy; Copyrights: Sawari. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
 </body>
 
 </html>

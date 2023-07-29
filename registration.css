@@ -3,10 +3,10 @@ body {
   background-color: #f0f0f0;
 }
 
-.container {
-  max-width: 400px;
+.form-container {
+  max-width: 450px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@ body {
 }
 
 .form-control {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -68,6 +68,10 @@ body {
   border: 1px solid #d6e9c6;
 }
 
+.form-group{
+  display:flex; 
+  flex-direction: column;
+}
 /* Optional: Add custom styles for specific form elements */
 .form-group label {
   display: block;

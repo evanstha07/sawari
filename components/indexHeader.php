@@ -1,5 +1,5 @@
 <?php
-include '../dbconn.php';
+include './dbconn.php';
 
 
 
@@ -27,8 +27,8 @@ if (isset($_SESSION['username'])) {
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./assets/img/Sawari.PNG" width="50px" height="50px"
-                    alt="error loading image">
+                <img src="./assets/img/Sawari.PNG" width="50px" height="50px" alt="error loading image">
+                <!-- <link rel="stylesheet" href="login.css"> -->
             </a>
             <?php
             if (isset($_SESSION['username'])) {
@@ -54,10 +54,10 @@ if (isset($_SESSION['username'])) {
                     <a class="nav-link active" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About us</a>
+                    <a class="nav-link active" href="about.php">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link active" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a href="./login.php" class="nav-link"> <button id="login-btn" style="width: 100px;">
@@ -68,8 +68,8 @@ if (isset($_SESSION['username'])) {
             } ?>
         </div>
     </nav>
-    
 
-          
-    
+
+
+
 </header>
