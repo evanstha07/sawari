@@ -1,17 +1,21 @@
 <?php
+
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
+    $subject = $_POST["subject"];
     $message = $_POST["message"];
 
     // Perform additional validation or processing as needed.
 
     // Send email (You may need to configure your server to enable email sending)
     $to = "contact@sawari.com";
-    $subject = "New Message from Sawari Contact Form";
-    $body = "Name: $name\nEmail: $email\nMessage: $message";
+    $email_subject = "New Message from Sawari Contact Form - " . $subject;
+    $body = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message";
 
-    if (mail($to, $subject, $body)) {
+    if (mail($to, $email_subject, $body)) {
         $successMessage = "Your message has been sent successfully!";
     } else {
         $errorMessage = "Oops! Something went wrong. Please try again later.";
@@ -30,8 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+
+<!-- <?php include "./components/indexHeader.php"; ?> -->
+    
+
     <div class="container">
-        <h1>Contact Sawari</h1>
+        <h1>Get in touch</h1>
+        <img src="./assets/img/Sawari.PNG" alt="Contact Image" class="contact-image" >
         <?php if (isset($successMessage)) : ?>
             <p class="success"><?php echo $successMessage; ?></p>
         <?php endif; ?>
@@ -49,6 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
             </div>
 
             <div class="form-group">
