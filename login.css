@@ -1,3 +1,11 @@
+body{
+    background-image:url("./assets//img//backimg.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh; /* Adjust the height as needed */
+}
+
 /* Styles for the login form */
 .main-container {
     max-width: 450px;
@@ -9,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    opacity: 0.8; 
   }
 
 h1 {
@@ -37,10 +46,10 @@ img{
     display: flex;
     flex-direction: column;
 
-      }
+}
 
 .form-btnn {
-    background-color: #721c24;
+    background-color:#cc858c;
 }
 
 .btn {
@@ -53,9 +62,9 @@ img{
     cursor: pointer;
 }
 
-/* .btn:hover {
-    background-color: #0056b3;
-} */
+ .form-btnn:hover {
+    background-color: #4e1a1a;
+} 
 
 .alert {
     padding: 10px;

@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sawari | Login Form</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 <body>
+
     <?php
     require_once "dbconn.php";
+    include "./components/indexHeader.php";
 
     if (isset($_POST["Login"])) {
         $username = $_POST["username"];
@@ -33,8 +36,10 @@
     }
     ?>
     <div class="main-container">
+
         <h1>Sawari | Login</h1>
         <img src="./assets/img/Sawari.PNG" height="50px" width="50px">
+
         <form action="" method="POST">
             <div class="form-group">
                 <input type="text" class="form-control" name="username" placeholder="Username">
@@ -45,10 +50,13 @@
             <div class="form-btn">
                 <button type="submit" class="form-btnn" name="Login">Login</button>
             </div>
+            <label style="margin-left: 5px;">or</label> <br>
+            <label style="margin-left: 5px;"><a href="registration.php">Create a new account.</a></label>
+
         </form>
     </div>
     <footer class="d-flex justify-content-center mt-5">
-        <strong>Copyright &copy; 2022
+        <strong>Copyright &copy; 2023
             <a href="index.php">Sawari </a>.</strong>
 </body>
 

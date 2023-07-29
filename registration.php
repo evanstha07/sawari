@@ -97,25 +97,25 @@
             </div>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                    <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="address" placeholder="Address">
+                    <input type="text" class="form-control" name="address" placeholder="Address" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="phone" placeholder="Phone">
+                    <input type="text" class="form-control" name="phone" placeholder="Phone" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Email">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="repeat" placeholder="Repeat Password">
+                    <input type="password" class="form-control" name="repeat" placeholder="Repeat Password" required>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Register" name="submit">
@@ -123,11 +123,11 @@
             </form>
 
         </div>
-        <footer class=" pb-5">
+        <footer class="d-flex justify-content-center mt-5">
             <div class="footer">
-                <p class="font text-muted mb-0 ">&copy; Copyrights: Sawari. All rights reserved.</p>
+                <p class="font text-muted mb-0 ">&copy; 2023, Sawari. All rights reserved.</p>
             </div>
-        </footer>
+
 
     </body>
 
