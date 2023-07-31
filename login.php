@@ -55,7 +55,7 @@
 
         </form>
     </div>
-    <footer class="d-flex justify-content-center mt-5">
+    <footer class="d-flex justify-content-center " style="margin-top:295px;">
         <strong>Copyright &copy; 2023
             <a href="index.php">Sawari </a>.</strong>
 </body>
