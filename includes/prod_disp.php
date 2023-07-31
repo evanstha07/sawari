@@ -18,21 +18,17 @@
 
                     <div class="d-flex form-outline justify-content-end">
 
-                        <input type="search" required value="<?php if (
-                                                                    isset($_GET['search'])
-                                                                ) {
+                        <input type="search" required value="<?php if (isset($_GET['search'])) {
                                                                     echo $_GET['search'];
-                                                                } ?>" placeholder="Search" name="search" class="d-inline form-control border-dark border-1 w-75">&nbsp;
-                        <!-- <button type="submit" class="btn btn-dark text-white">
+                                                                } ?>" placeholder="Search" name="search" class="d-inline form-control border-success border-2 w-75">&nbsp;
+                        <button type="submit" class="btn navigation text-white">
                             <i class="fa fa-search"></i>
-                        </button> -->
+                        </button>
                     </div>
                 </form>
             </div>
             <!-- Products -->
-            <?php while (
-                $featuredProd = mysqli_fetch_array($featuredProducts)
-            ) { ?>
+            <?php while ($featuredProd = mysqli_fetch_array($featuredProducts)) { ?>
                 <div class="col mb-5 zoom">
                     <div class="border-1 border-success card h-100 rounded-3">
                         <form action="" method="POST">
@@ -46,14 +42,13 @@
                                         <?php echo $featuredProd['name']; ?>
                                     </h5>
                                     <!-- Product price-->
-                                    Rs. <?php echo $featuredProd['price'] ?>
+                                    Rs. <?php echo $featuredProd['price'] . ' ' . '/' . ' ' . $featuredProd['unit']; ?>
 
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="text-center card-footer border-top-0 bg-transparent">
                                 <div class="btn-group-sm mb-3">
-                                    <a href="products.php?pid=<?php echo $featuredProd['productid']; ?>" class="btn border-success btn-outline-dark">
+                                    <a href="products.php?pid=<?php echo $featuredProd["productid"]; ?>" class="btn border-success text-light font btn navigation">
                                         Details
                                     </a>
                                 </div>

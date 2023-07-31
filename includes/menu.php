@@ -7,8 +7,8 @@ session_start();
         <div class="container-fluid">
             <div class="container px-4 w-75">
                 <div class="navbar-brand">
-                    <a href="./index.php"><img class="img-fluid" src="./admin/uploads/products/cheers.jpg" style="width: 25%;" href="./index.php" alt="Cheers"></a>
-               </div>
+                    <a href="./index.php"><img class="img-fluid" src="./admin/uploads/products/sawari.jpg" style="width: 25%;" href="./index.php" alt="Sawari"></a>
+                </div>
             </div>
             <div class="container w-75" style="font-family:'Lora', serif; font-size:17px; margin-left: 150px;">
                 <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@ session_start();
                                 <b class="hov"><i class="bi bi-person"></i>' . " " . $_SESSION['username'];
                                 '</b></a>';
                             } else {
-                                echo '<a class="nav-link a text-dark px-4 " href="./signup.php"><b class="hov">Register</b></a>';
+                                echo '<a class="nav-link a text-dark px-4 " href="./registration.php"><b class="hov">Register</b></a>';
                             }
                             ?>
                             </b></a>
