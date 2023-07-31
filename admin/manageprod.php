@@ -65,7 +65,7 @@ include '../dbconn.php';
             </div>
 
             <?php
-            $q = mysqli_query($conn, "SELECT * FROM admin");
+            $q = mysqli_query($conn, "SELECT * FROM cars");
             $rr = mysqli_num_rows($q);
             if (!$rr) {
                 echo "<h2 style='color:red'>No any products found !!!</h2>";
@@ -79,11 +79,13 @@ include '../dbconn.php';
                     </tr>
                     <tr class=" success">
                         <th>S.No</th>
-                        <th>Name</th>
-                        <th>Photo</th>
-                        <th>Description</th>
+                        <!-- <th>Name</th> -->
+                        <!-- <th>Photo</th> -->
+                        <th>Brand</th>
+                        <th>Car Type</th>
+                        <th>Model</th>
+                        <th>Year</th>
                         <th>Price</th>
-                        <th>Stock</th>
                         <th>Delete</th>
                         <th>Update</th>
                     </tr>
@@ -93,18 +95,20 @@ include '../dbconn.php';
                     while ($row = mysqli_fetch_assoc($q)) {
                         echo "<tr>";
                         echo "<td>" . $i . "</td>";
-                        echo "<td>" . $row['name'] . "</td>";
+                        // echo "<td>" . $row['name'] . "</td>";
                     ?>
-                        <td class="w-25 "><img class="img-fluid w-75" src="../admin/uploads/products/<?php echo $row['photo']; ?>" alt="" />
-                            <?php
-                            echo "<td>" . $row['description'] . "</td>";
-                            echo "<td>" . $row['price'] . "</td>";
-                            echo "<td>" . $row['stock'] . "</td>";
-                            ?>
-                        <td><a href="javascript:DeleteProducts('<?php echo $row['productid']; ?>')" class="btn btn-danger">Delete</a></td>
+                        <!-- <td class="w-25 "><img class="img-fluid w-75" src="../admin/uploads/products/<?php echo $row['photo']; ?>" alt="" /> -->
+                        <?php
+                        echo "<td>" . $row['brand'] . "</td>";
+                        echo "<td>" . $row['car_type'] . "</td>";
+                        echo "<td>" . $row['model'] . "</td>";
+                        echo "<td>" . $row['year'] . "</td>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        ?>
+                        <td><a href="javascript:DeleteProducts('<?php echo $row['id']; ?>')" class="btn btn-danger">Delete</a></td>
 
                     <?php
-                        echo "<td><a href='updateProd.php?page=updateProd&pid=" . $row['productid'] . "' class='btn btn-secondary'>Update</a></td>";
+                        echo "<td><a href='updateProd.php?page=updateProd&pid=" . $row['id'] . "' class='btn btn-secondary'>Update</a></td>";
                         echo "</tr>";
                         $i++;
                     }

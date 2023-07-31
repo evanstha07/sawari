@@ -24,7 +24,7 @@
         </div>
         <div class="col-lg-6 d-none d-lg-block">
           <!-- <img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"> -->
-          <img src="./assets//img///audi.jpg" alt="Image Description" class="custom-image">
+          <img src="./assets//img//aboutfirstimg.jpg" alt="Image Description" class="custom-image" style="width:100%; height:100%; border-radius:50% ">
 
         </div>
       </div>

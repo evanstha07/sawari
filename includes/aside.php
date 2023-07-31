@@ -1,38 +1,30 @@
 <div class="wrapper">
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light bg-dark">
+    <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light bg-dark">
         <!-- Left navbar links -->
-        <ul class="navbar-nav">
+    <!-- <ul class="navbar-nav"> -->
 
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link text-white-50">Admin Panel</a>
-            </li>
-            <!-- <li class="nav-item d-none d-sm-inline-block">
+
+    <!-- <li class="nav-item d-none d-sm-inline-block">
           <a href="../contact.php" class="nav-link">Contact</a>
         </li> -->
-        </ul>
+    </ul> -->
 
-        <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
 
-            </li>
-
-
-            <!-- Notifications Dropdown Menu -->
-
-            <li>
-                <a class="nav-link text-white-50" href="#">
-                    <!-- <i class="far fa-user text-white-50"></i> <?php echo $_SESSION['admin']; ?> -->
-                </a>
-            </li>
-            <li class="info">
-                <a class="nav-link text-white-50 font" href="./logout.php">
-                    <i class="fa fas-sign-out-alt text-white-50" aria-hidden="true"></i>Logout
-                </a>
-            </li>
+        </li>
 
 
-        </ul>
+        <!-- Notifications Dropdown Menu -->
+
+        <li>
+            <a class="nav-link text-white-50" href="#">
+                <!-- <i class="far fa-user text-white-50"></i> <?php echo $_SESSION['admin']; ?> -->
+            </a>
+
+
+    </ul>
     </nav>
     <!-- /.navbar -->
 
@@ -53,6 +45,9 @@
                 </div>
                 <div class="info">
                     <!-- <a href="#" class="d-block font"><?php echo $_SESSION['admin']; ?></a> -->
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link text-white-50">Admin Panel</a>
+                    </li>
                 </div>
             </div>
 
@@ -100,6 +95,13 @@
                             </p>
                         </a>
                     </li>
+                    </li>
+                    <li class="info">
+                        <a class="nav-link text-white-50 font" href="./logout.php">
+                            <i class="fa fas-sign-out-alt text-white-50" aria-hidden="true"></i>Logout
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

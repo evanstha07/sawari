@@ -2,13 +2,40 @@
 <html>
 
 <head>
-    <title>Sawari | Add New Car</title>
 
+
+    <title>Sawari | Add New Car</title>
+    <link rel="stylesheet" href="./css/add-product.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css" />
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="plugins/bs-stepper/css/bs-stepper.min.css" />
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css" />
 </head>
 
 <body>
     <?php
     require "../dbconn.php";
+    include '../includes/aside.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $brand = $_POST['brand'];
         $car_type = $_POST['car_type'];
@@ -53,6 +80,11 @@
                 </select>
             </div>
 
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
 
 
             <div class="form-group">
@@ -79,34 +111,42 @@
 
 
     </div>
-    <!-- <div class="form-group">
-                <label for="pickup-date">Pickup Date:</label>
-                <input type="date" id="pickup-date" name="pickubrand">
-            </div>
-            <div class="form-group">
-                <label for="return-date">Return Date:</label>
-                <input type="date" id="return-date" name="return_date"> -->
-    <!-- </div> -->
-    <!-- <div class="form-group">
-            <label for="customer-name">Name:</label>
-            <input type="text" id="customer-name" name="customer_name" placeholder="Enter your name" required>
-    </div>
-    <div class="form-group">
-        <label for="customer-phone">Phone Number:</label>
-        <input type="tel" id="customer-phone" name="customer_phone" placeholder="Enter your phone number" required>
-    </div>
-    <div class="form-group">
-        <label for="customer-email">Email:</label>
-        <input type="email" id="customer-email" name="customer_email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-        <label for="customer-address">Address:</label>
-        <input type="text" id="customer-address" name="customer_address" placeholder="Enter your address" required>
-    </div> -->
-
-
     </form>
     </div>
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js"></script>
+
 </body>
 
 </html>

@@ -90,7 +90,7 @@
     </head>
 
     <body>
-        <div class="form-container">
+        <div class="form-container" style="background-color: aliceblue;">
             <div class="header">
                 <h2>Sawari | Registration Form</h2>
                 <img src="./assets/img/Sawari.PNG" alt="logo" width="100px" height="100px">

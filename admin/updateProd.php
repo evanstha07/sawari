@@ -1,10 +1,10 @@
 <?php
-include '../includes/dbconn.php';
+include '../dbconn.php';
 session_start();
 
 extract($_POST);
 if (isset($update)) {
-	mysqli_query($mysqli, "UPDATE products SET price='$price',stock='$stock', description='$description' where productid='" . $_GET['pid'] . "'");
+	mysqli_query($conn, "UPDATE cars SET brand='$brand',model='$model', car_type='$cartype' where id='" . $_GET['pid'] . "'");
 	$err = "<font color='blue'>Product updated </font>";
 	echo '<script>
 	alert("Product Updated");
@@ -14,7 +14,7 @@ if (isset($update)) {
 
 //select old product
 
-$q = mysqli_query($mysqli, "SELECT * FROM products WHERE productid='" . $_GET['pid'] . "'");
+$q = mysqli_query($conn, "SELECT * FROM cars WHERE id='" . $_GET['pid'] . "'");
 $res = mysqli_fetch_array($q);
 ?>
 <?php
