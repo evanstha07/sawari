@@ -84,45 +84,49 @@ include '../includes/aside.php'; ?>
 					<div class="form-group mb-3">
 						<div class="col-sm-4"><?php echo @$err; ?></div>
 					</div>
+					<div class="form-group">
+						<label for="brand">Brand:</label>
+						<select id="brand" name="brand" value="<?php echo $res['brand']; ?>">
+							<option value="Hyundai">Hyundai</option>
+							<option value="Volkswagen">Volkswagen</option>
+							<option value="Honda">Honda</option>
+							<option value="KIA">KIA</option>
+							<option value="Toyota">Toyota</option>
+							<option value="Skoda">Skoda</option>
+							<option value="Suzuki">Suzuki</option>
+							<option value="Nissan">Nissan</option>
+							<option value="Jeep">Jeep</option>
+						</select>
+					</div>
+					<div class="form-group mb-3">
+						<b>Select Product</b>
+
+					</div>
+					<div class="form-group">
+						<select id="car_type" value="<?php echo $res['car_type']; ?>" name="car_type">
+							<option value="Sedan">Sedan</option>
+							<option value="SUV">SUV</option>
+							<option value="Hatchbag">Hatchbag</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="model">Model:</label>
+						<input type="text" id="model" value="<?php echo $res['model']; ?>" name="model" required>
+					</div>
+
+					<div class="form-group">
+						<label for="year">Year:</label>
+						<input type="number" id="year" value="<?php echo $res['year']; ?>" name="year" min="1886" max="2099" required>
+					</div>
 
 					<div class="form-group mb-3">
 						<b>Enter Price</b>
 						<input type="text" name="price" value="<?php echo $res['price']; ?>" class="mt-2 border-secondary form-control" />
 					</div>
 
-					<!-- <div class="form-group mb-3">
-						<b>Unit</b>
-						<select name="unit" required autocomplete="off" class="form-control border-1 border-secondary combobox" id="unit">
-							<option value="Kg">Kg</option>
-							<option value="Dozen">Dozen</option>
-							<option value="Piece">Piece</option>
-							<option value="Mutha">Mutha</option>
-							<option value="Bunch">Bunch</option>
-						</select>
-					</div> -->
-
-					<div class="form-group mb-3">
-						<b>Enter Available Stock</b>
-						<input type="text" name="stock" class="mt-2 border-secondary form-control" value="<?php echo $res['stock']; ?>">
-					</div>
-
-					<div class="form-group mb-3">
-						<b>Enter Description</b>
-						<textarea name="description" class="mt-2 border-secondary form-control"><?php echo $res['description']; ?></textarea>
-					</div>
 
 
-					<div class="form-group mb-3">
-						<b>Select Product</b>
-						<select name="products[]" multiple="single" class="mt-2 form-control border-secondary">
-							<?php
-							$sql = mysqli_query($mysqli, "select name,description from products");
-							while ($r = mysqli_fetch_array($sql)) {
-								echo "<option value='" . $r['email'] . "'>" . $r['name'] . "</option>";
-							}
-							?>
-						</select>
-					</div>
 
 					<div class="text-white form-group mt-4">
 						<input type="submit" value="Update" name="update" class="btn btn-primary" />

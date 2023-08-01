@@ -46,7 +46,7 @@ session_start();
                                 </a>
                                 <div class="dropdown-menu border-dark" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="./useredit.php"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="./logout.php"><i class="fa fa-sign-out"></i>Logout</a>
+                                    <a class="dropdown-item" href="../logout.php"><i class="fa fa-sign-out"></i>Logout</a>
                                 </div>
                             </div>';
                             } else {

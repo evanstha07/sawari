@@ -11,7 +11,7 @@
 
 <body>
 
-  <?php include "./components/indexHeader.php"; ?>
+  <?php include "./includes/menu.php"; ?>
 
   <div class="bg-light">
     <div class="container py-5">

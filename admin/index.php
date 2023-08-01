@@ -24,18 +24,18 @@ if (isset($login)) {
     <title>Sawari | Admin Login</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <style>
-        body {
-            position: relative;
-            /* Needed for the ::before pseudo-element */
-            background-image: url("../assets/img/pexels-photo-3457780.webp");
+        /* body { */
+        /* position: relative; */
+        /* Needed for the ::before pseudo-element */
+        /* background-image: url("../assets/img/pexels-photo-3457780.webp");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 90vh;
-            /* Adjust the height as needed */
-        }
+            height: 90vh; */
+        /* Adjust the height as needed */
+        /* } */
 
-        body::before {
+        /* body::before {
             content: "";
             position: absolute;
             top: 0;
@@ -43,9 +43,9 @@ if (isset($login)) {
             bottom: 0;
             left: 0;
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/pexels-photo-3457780.webp");
-            opacity: 0.5;
-            /* Adjust the opacity value as needed (0 to 1) */
-        }
+            opacity: 0.5; */
+        /* Adjust the opacity value as needed (0 to 1) */
+        /* } */
     </style>
     <!-- <script src="./js/validate.js"></script> -->
     <!-- Website Logo -->
@@ -74,31 +74,25 @@ if (isset($login)) {
             <div class="d-flex justify-content-center align-items-center">
                 <div class="col-5 d-flex justify-content-center m-auto">
                     <div class="card mb-5 p-4 py-0 text-black w-75 border-2 border-success" style="border-radius: 25px;">
-                        <div class="border-2 card-body px-0 py-0 rounded-2" style="align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-self: center; 
-    margin-top: 50%; "> <!-- <img src="../assets//img///audi.jpg" alt="background image" style="background-size: cover; background-position: center center; "> -->
+                        <div class="border-2 card-body px-0 py-0 rounded-2">
+                            <!-- <img src=" ../assets//img///audi.jpg" alt="background image" style="background-size: cover; background-position: center center; "> -->
 
-                            <h4 class="text-success d-flex justify-content-center mt-2 mb-2 font" style="color: #ffffff;">Admin Login </h4>
-                            <form method=" POST" class="mt-2">
-                                <fieldset style="width:300px; height:150px; padding: 20px;">
+                            <h4 class="text-success d-flex justify-content-center mt-2 mb-2 font">Admin Login </h4>
+                            <form method="POST" class="mt-2">
+                                <div class=" form-group">
+                                    <label for="username" class="mb-1"><b>Username</label>
+                                    <span class="text-danger">*</span></b> <input class="form-control mb-2 border-success" name="user" type="text" required placeholder="Username">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="password" class="mb-1"><b>Password</label>
+                                    <span class=" text-danger">*</span></b>
+                                    <input class="form-control mb-1 border-success" placeholder="Password" name="pass" type="password" required>
+                                </div>
 
-                                    <div class=" form-group">
-                                        <label for="username" class="mb-1" style="color: #ffffff;"><b>Username</label>
-                                        <span class="text-danger" style="color: #ffffff;">*</span></b> <input class="form-control mb-2 border-success" name="user" type="text" required placeholder="Username">
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <label for="password" class="mb-1" style="color: #ffffff;"><b>Password</label>
-                                        <span class=" text-danger" style="color: #ffffff;">*</span></b>
-                                        <input class="form-control mb-1 border-success" placeholder="Password" name="pass" type="password" required>
-                                    </div>
-
-                                    <div class="form-group d-flex form-group justify-content-center">
-                                        <input name="login" type="submit" value="Login" class="d-flex justify-content-between btn text-white bg-dark btn-block" style="justify-content:center;">
-                                    </div>
-                                    <?php echo @$err; ?>
+                                <div class="form-group d-flex form-group justify-content-center">
+                                    <input name="login" type="submit" value="Login" class="d-flex justify-content-center btn text-white bg-dark btn-block">
+                                </div>
+                                <?php echo @$err; ?>
                                 </fieldset>
                             </form>
                         </div>

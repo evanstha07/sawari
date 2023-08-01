@@ -1,11 +1,11 @@
 <?php
+session_start();
 require "../dbconn.php";
 include '../includes/aside.php';
-$photo = 'no-image.jpg';
 
 // Edit Products
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $photo = $_FILES["photo"]["name"];
+    $photo = $_FILES['photo']['name'];
     $brand = $_POST['brand'];
     $car_type = $_POST['car_type'];
     $model = $_POST['model'];
@@ -14,9 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $target_path = "uploads/products/";
-        $target_path = $target_path . basename(
-            $_FILES['photo']['name']
-        );
+        $target_path = $target_path . basename($_FILES['photo']['name']);
 
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_path)) {
             '<script>console.log("File uploaded successfully!");</script>';
@@ -24,17 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '<script>console.log("File upload failed, please try again!");</script>';
         }
 
-        $query = mysqli_query($conn, "INSERT INTO cars (photo,brand,car_type, model, year, price) VALUES ('$photo','$brand','$car_type','$model','$year', '$price'");
+        $query = mysqli_query($conn, "INSERT INTO cars (photo,brand,car_type,model,year,price) VALUES ('$photo','$brand','$car_type','$model','$year', '$price')");
     } catch (Exception $e) {
         $message = 'Unable to add new product.' . $e;
         throw new Exception('Unable to save details.', 0, $e);
     }
 
-    if ($mysqli->affected_rows == 0) {
-        echo '<script>alert("Cannot Add Product");</script>';
-        header("Location:../admin/add-product.php");
+    if ($conn->affected_rows == 0) {
+        echo '<script>alert("Cannot Add Car");window.location.href = "./add-product.php"
+        </script>';
     } else {
-        echo '<script>alert("Product Added Succesfully");window.location.href = "./dashboard.php";SS</script>';
+        echo '<script>alert("Car Added Succesfully");window.location.href = "dashboard.php";</script>';
     }
 }
 ?>
@@ -106,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Add Car">
+                <input type="submit" name="submit_prod" id="submit" class="btn btn-outline-dark" value="Add">
             </div>
         </form>
     </div>

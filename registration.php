@@ -11,9 +11,8 @@
 </head>
 
 <body>
-
-    <?php include "./components/indexHeader.php"; ?>
-
+    <?php
+    include "./includes/menu.php" ?>
     <?php
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
@@ -60,8 +59,6 @@
             }
         } else {
             // Ensure the hashed password doesn't exceed the allowed length (e.g., 255)
-            $PasswordHash = substr($PasswordHash, 0, 255);
-
             $sql = "INSERT INTO users (fullname, address, phone, email, username, password) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = mysqli_stmt_init($conn);
             $prepareStmt = mysqli_stmt_prepare($stmt, $sql);

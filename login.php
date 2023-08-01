@@ -15,7 +15,7 @@
 
     <?php
     require_once "dbconn.php";
-    include "./components/indexHeader.php";
+    include "./includes/menu.php";
 
     if (isset($_POST["Login"])) {
         $username = $_POST["username"];

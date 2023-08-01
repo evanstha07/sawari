@@ -80,7 +80,7 @@ include '../dbconn.php';
                     <tr class=" success">
                         <th>S.No</th>
                         <!-- <th>Name</th> -->
-                        <!-- <th>Photo</th> -->
+                        <th>Photo</th>
                         <th>Brand</th>
                         <th>Car Type</th>
                         <th>Model</th>
@@ -97,14 +97,14 @@ include '../dbconn.php';
                         echo "<td>" . $i . "</td>";
                         // echo "<td>" . $row['name'] . "</td>";
                     ?>
-                        <!-- <td class="w-25 "><img class="img-fluid w-75" src="../admin/uploads/products/<?php echo $row['photo']; ?>" alt="" /> -->
-                        <?php
-                        echo "<td>" . $row['brand'] . "</td>";
-                        echo "<td>" . $row['car_type'] . "</td>";
-                        echo "<td>" . $row['model'] . "</td>";
-                        echo "<td>" . $row['year'] . "</td>";
-                        echo "<td>" . $row['price'] . "</td>";
-                        ?>
+                        <td class="w-25 "><img class="img-fluid w-75" src="../admin/uploads/products/<?php echo $row['photo']; ?>" alt="" />
+                            <?php
+                            echo "<td>" . $row['brand'] . "</td>";
+                            echo "<td>" . $row['car_type'] . "</td>";
+                            echo "<td>" . $row['model'] . "</td>";
+                            echo "<td>" . $row['year'] . "</td>";
+                            echo "<td>" . $row['price'] . "</td>";
+                            ?>
                         <td><a href="javascript:DeleteProducts('<?php echo $row['id']; ?>')" class="btn btn-danger">Delete</a></td>
 
                     <?php

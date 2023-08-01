@@ -14,41 +14,43 @@
                         <a class="dropdown-item" href="./others.php">Others</a>
                     </div>
                 </div> -->
-                <form method="GET" action="./psearch.php">
+                <form method="GET" action="../psearch.php">
 
                     <div class="d-flex form-outline justify-content-end">
 
                         <input type="search" required value="<?php if (isset($_GET['search'])) {
                                                                     echo $_GET['search'];
-                                                                } ?>" placeholder="Search" name="search" class="d-inline form-control border-success border-2 w-75">&nbsp;
-                        <button type="submit" class="btn navigation text-white">
-                            <i class="fa fa-search"></i>
-                        </button>
+                                                                } ?>" placeholder="Search" name="search" class="d-inline form-control border-dark border-2 w-75">&nbsp;
+                        <button type="submit" class="btn btn-outline-dark">
+                            Search </button>
                     </div>
                 </form>
             </div>
             <!-- Products -->
             <?php while ($featuredProd = mysqli_fetch_array($featuredProducts)) { ?>
                 <div class="col mb-5 zoom">
-                    <div class="border-1 border-success card h-100 rounded-3">
+                    <div class="border-1 border-dark card h-100 rounded-3">
                         <form action="" method="POST">
                             <!-- Product image-->
-                            <img class="card-img-top" src="admin/uploads/products/<?php echo $featuredProd['photo']; ?>" alt="" />
+                            <img class="card-img-top mb-2" src=" ./admin/uploads/products/<?php echo $featuredProd['photo']; ?>" alt="photo" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">
-                                        <?php echo $featuredProd['name']; ?>
+                                        <?php echo $featuredProd['brand']; ?>
+                                        <?php echo $featuredProd['model']; ?>
                                     </h5>
+                                    <h6 class="">Car Type: <?php echo $featuredProd['car_type']; ?>
+                                    </h6>
                                     <!-- Product price-->
-                                    Rs. <?php echo $featuredProd['price'] . ' ' . '/' . ' ' . $featuredProd['unit']; ?>
+                                    Rs. <?php echo $featuredProd['price']; ?>
 
                                 </div>
                             </div>
                             <div class="text-center card-footer border-top-0 bg-transparent">
                                 <div class="btn-group-sm mb-3">
-                                    <a href="products.php?pid=<?php echo $featuredProd["productid"]; ?>" class="btn border-success text-light font btn navigation">
+                                    <a href="products.php?pid=<?php echo $featuredProd["id"]; ?>" class="btn btn-outline-dark">
                                         Details
                                     </a>
                                 </div>

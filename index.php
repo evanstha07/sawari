@@ -1,3 +1,6 @@
+<?php
+include './dbconn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +29,12 @@
     </header>
     <!-- Section-->
     <?php
-    $featuredProducts = mysqli_query($conn, "SELECT * FROM products");
+    $featuredProducts = mysqli_query($conn, "SELECT * FROM cars");
+    ?>
+    <?php
     include('includes/prod_disp.php');
+    ?>
+    <?php
     require './includes/footer.php';
     ?>
 </body>

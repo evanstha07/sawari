@@ -1,5 +1,5 @@
 <?php
-include('./includes/dbconn.php');
+include('./dbconn.php');
 ?>
 <html lang="en">
 
@@ -40,8 +40,8 @@ include('./includes/dbconn.php');
                             $mysqli = mysqli_connect("localhost", "root", "", "sawari");
                             if (isset($_GET['search'])) {
                                 $filtervalues = $_GET['search'];
-                                $query = "SELECT * FROM products WHERE CONCAT(name) LIKE '%$filtervalues%' ";
-                                $query_run = mysqli_query($mysqli, $query);
+                                $query = "SELECT * FROM cars WHERE CONCAT(brand,car_type,model,year) LIKE '%$filtervalues%' ";
+                                $query_run = mysqli_query($conn, $query);
                                 if (mysqli_num_rows($query_run) > 0) {
                                     foreach ($query_run as $featuredProd) {
                             ?>
