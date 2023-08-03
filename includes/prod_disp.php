@@ -2,19 +2,8 @@
     <div class="container px-4 px-lg-5 mt-0">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div class="input-group" style=" display:inline-flex; justify-content:flex-end; align-items:right; margin:40px;">
-                <!-- <div class="dropdown">
-                    <a class="dropdown-toggle btn border-success nav-link text-light font btn navigation" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <b class="hov">Category</b>
-                    </a>
 
-                    <div class="dropdown-menu border-success" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="./index.php">All Products</a>
-                        <a class="dropdown-item" href="./fruits.php">Fruits</a>
-                        <a class="dropdown-item" href="./vegetables.php">Vegetables</a>
-                        <a class="dropdown-item" href="./others.php">Others</a>
-                    </div>
-                </div> -->
-                <form method="GET" action="../psearch.php">
+                <form method="GET" action="./psearch.php">
 
                     <div class="d-flex form-outline justify-content-end">
 

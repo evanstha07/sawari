@@ -21,9 +21,10 @@ include('./dbconn.php');
     ?>
 
     <div class="col-md-12 container mb-5 p-lg-5">
-        <h2 class="d-flex mt-5 text-light font">YOUR SEARCH IS HERE</h2>
         <div class="card mt-4">
             <div class="card-body">
+                <h2 class="d-flex mt-5 text-dark font">YOUR SEARCH IS HERE</h2>
+
                 <table class="table table-bordered border border-dark">
                     <thead>
                         <tr>
@@ -63,7 +64,7 @@ include('./dbconn.php');
 									</a>';
                                                 }
                                                 ?>
-                                                <input type="hidden" name="Item_name" value="<?php echo $featuredProd['name']; ?>">
+                                                <input type="hidden" name="Item_name" value="<?php echo $featuredProd['brand'] . $featuredProd['model']; ?>">
                                                 <input type="hidden" name="price" value="<?php echo $featuredProd['price']; ?>">
                                             </td>
                                         </tr>

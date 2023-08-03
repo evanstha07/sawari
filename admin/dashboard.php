@@ -64,9 +64,9 @@ include '../dbconn.php'
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner font">
-                  <h4 class="mb-2">Total Products</h4>
+                  <h4 class="mb-2">Total Cars</h4>
                   <?php
-                  $dashTotProd = "SELECT * from admin";
+                  $dashTotProd = "SELECT * from cars";
                   $dashTotProdQuery = mysqli_query($conn, $dashTotProd);
 
                   if ($totalProd = mysqli_num_rows($dashTotProdQuery)) {
@@ -89,7 +89,7 @@ include '../dbconn.php'
                 <div class="inner">
                   <h4 class="mb-2">Total Users</h4>
                   <?php
-                  $dashTotUsr = "SELECT * from admin";
+                  $dashTotUsr = "SELECT * from users";
                   $dashTotUsrQuery = mysqli_query($conn, $dashTotUsr);
 
                   if ($totalUsr = mysqli_num_rows($dashTotUsrQuery)) {
@@ -110,9 +110,9 @@ include '../dbconn.php'
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h4 class="mb-2">Total Orders</h4>
+                  <h4 class="mb-2">Total Bookings</h4>
                   <?php
-                  $dashTotOrd = "SELECT * from admin";
+                  $dashTotOrd = "SELECT * from bookings";
                   $dashTotOrdQuery = mysqli_query($conn, $dashTotOrd);
 
                   if ($totalProd = mysqli_num_rows($dashTotOrdQuery)) {

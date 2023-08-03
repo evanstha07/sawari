@@ -1,44 +1,32 @@
 <div class="wrapper">
     <!-- Navbar -->
     <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light bg-dark">
-        <!-- Left navbar links -->
+        Left navbar links -->
     <!-- <ul class="navbar-nav"> -->
 
 
     <!-- <li class="nav-item d-none d-sm-inline-block">
           <a href="../contact.php" class="nav-link">Contact</a>
         </li> -->
-    </ul> -->
+    </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
 
         </li>
-
-
-        <!-- Notifications Dropdown Menu -->
-
         <li>
             <a class="nav-link text-white-50" href="#">
                 <!-- <i class="far fa-user text-white-50"></i> <?php echo $_SESSION['admin']; ?> -->
             </a>
-
-
     </ul>
     </nav>
-    <!-- /.navbar -->
 
-    <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" style="display:flex; flex-direction:column">
-        <!-- Brand Logo -->
         <a href="#" class="brand-link">
             <img src="../assets/img/Sawari.PNG" alt="Sawari Logo" class="brand-image elevation-3" style="opacity: 0.8; margin-left: 50px;" />
-            <!-- <span class="brand-text font">Cheers</span> -->
         </a>
 
-        <!-- Sidebar -->
         <div class="sidebar">
-            <!-- Sidebar user (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
                     <i class="fa fa-user-alt text-white-50"></i>
@@ -54,7 +42,6 @@
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
                     <li class="nav-item">
                         <a href="./dashboard.php" class="d-block nav-link font">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -67,7 +54,7 @@
                         <a href="./add-product.php" class="d-block nav-link font">
                             <i class="nav-icon fas fa-upload"></i>
                             <p>
-                                Add Product
+                                Add Car
                             </p>
                         </a>
                     </li>
@@ -75,7 +62,7 @@
                         <a href="./manageprod.php" class="nav-link font">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
-                                Manage Product
+                                Manage Car
                             </p>
                         </a>
                     </li>
@@ -91,14 +78,13 @@
                         <a href="./manageorder.php" class="d-block nav-link font">
                             <i class="nav-icon fas fa-user-edit"></i>
                             <p>
-                                Manage Order
+                                Manage Bookings
                             </p>
                         </a>
                     </li>
-                    </li>
-                    <li class="info">
-                        <a class="nav-link text-white-50 font" href="./logout.php">
-                            <i class="fa fas-sign-out-alt text-white-50" aria-hidden="true"></i>Logout
+                    <li class="nav-item">
+                        <a class="nav-link d-block font" href="./logout.php">
+                            <>Logout
                         </a>
                     </li>
 
