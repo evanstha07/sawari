@@ -1,5 +1,8 @@
 <?php
 include './dbconn.php';
+if (isset($_SESSION["username"])) {
+    echo 'teroba';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

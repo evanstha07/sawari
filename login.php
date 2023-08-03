@@ -21,19 +21,21 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        $sql = "SELECT username,password FROM users WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT username, password FROM users WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        if ($user) {
+        if ($user && password_verify($password, $user['password'])) {
+            // Password is correct, user is authenticated
+            // You can set sessions or perform other actions here
             echo "<script>alert('Login Successful');window.location.href='./index.php'</script>";
-            die();
+            $_SESSION['username'] = $username;
         } else {
             echo "<div class='alert alert-danger'> Invalid username or password</div>";
         }
-    } else {
-        echo "<div class='alert alert-danger'> Invalid username or password</div>";
     }
+
+
     ?>
     <div class="main-container">
 
