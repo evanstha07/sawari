@@ -1,16 +1,10 @@
 <?php
+session_start();
 include('./dbconn.php');
-
-$cid = $_GET['oid'];
-$orders = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'");
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $propertyID = $cid;
-    $username = $_SESSION["username"];
-    header("Location:booking.php?oid=" . $cid);
-}
-// Save Business Contact Info
+$cid = $_GET['pid'];
+$car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,20 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sawari | Booking</title>
-    <link rel="stylesheet" href="./booking.css" </head>
+    <link rel="stylesheet" href="./booking.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
 
 <body>
     <h1>Car Booking</h1>
 
-
-    <form method="POST" action="">
-        <label for="car">Select a Car:</label>
-        <select name="car" id="car">
-            <!-- Populate options with car data from your database -->
-            <option value="car_id">car1</option>
-            ?
-            <!-- Add more options -->
-        </select>
+    <form method="POST" action="./bookCardb.php?pid=<?php echo $cid; ?>">
+        <label for="car">Your booking:</label>
+        <p><?php echo $car['brand'] . " " . $car['model']; ?></p>
 
         <label for="pickup_date">Pickup Date:</label>
         <input type="date" name="pickup_date" id="pickup_date" required>

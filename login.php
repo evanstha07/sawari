@@ -15,6 +15,7 @@
 
     <?php
     require_once "dbconn.php";
+    session_start();
     include "./includes/menu.php";
 
     if (isset($_POST["Login"])) {
