@@ -7,7 +7,9 @@ session_start();
         <div class="container-fluid">
             <div class="container px-4 w-75">
                 <div class="navbar-brand">
-                    <a href="./index.php"><img class="img-fluid" src="../assets//img///Sawari.PNG" style="width: 25%;" href="./index.php" alt="Sawari"></a>
+                    <a href="./index.php"><img class="img-fluid" src="./assets/img/Sawari.PNG" style="width: 11%;" href="./index.php" alt="Sawari"></a>
+                    <a href="./index.php"><b class="font">Sawari</b></a>
+
                 </div>
             </div>
             <div class="container w-75" style="font-family:'Lora', serif; font-size:17px; margin-left: 150px;">

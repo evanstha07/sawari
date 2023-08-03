@@ -38,11 +38,11 @@ body {
 
 .form-control:focus {
   outline: none;
-  border-color: #4CAF50;
+  border-color: #4caf50;
 }
 
 .btn-primary {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
@@ -68,8 +68,8 @@ body {
   border: 1px solid #d6e9c6;
 }
 
-.form-group{
-  display:flex; 
+.form-group {
+  display: flex;
   flex-direction: column;
 }
 /* Optional: Add custom styles for specific form elements */

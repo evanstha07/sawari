@@ -39,9 +39,16 @@
                             </div>
                             <div class="text-center card-footer border-top-0 bg-transparent">
                                 <div class="btn-group-sm mb-3">
-                                    <a href="products.php?pid=<?php echo $featuredProd["id"]; ?>" class="btn btn-outline-dark">
-                                        Details
-                                    </a>
+                                    <?php if (isset($_SESSION['username'])) { ?>
+                                        <a href="products.php?pid=<?php echo $featuredProd["id"]; ?>" class="btn btn-outline-dark">
+                                            Details
+                                        </a>
+                                    <?php } else { ?>
+                                        <a href="login.php" class="btn btn-outline-dark">
+                                            Details
+                                        </a>
+                                    <?php } ?>
+
                                 </div>
                             </div>
                         </form>

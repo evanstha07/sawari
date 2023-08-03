@@ -49,12 +49,11 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
-            <div class="form-btn">
+            <div class="form-btn mb-3">
                 <button type="submit" class="form-btnn" name="Login">Login</button>
             </div>
-            <label style="margin-left: 5px;">or</label> <br>
-            <label style="margin-left: 5px;"><a href="registration.php">Create a new account.</a></label>
-
+            <div class="d-flex m-auto justify-content-center align-item-center">Don't have an account?&nbsp;<label style="margin-left: 5px;"><a href="registration.php">Sign Up</a></label>
+            </div>
         </form>
     </div>
     <footer class="d-flex justify-content-center mt-5">
