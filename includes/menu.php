@@ -41,12 +41,12 @@ session_start();
                             <!-- <a class="nav-link a text-dark px-4" href="./logout.php"><b class=" hov"> -->
                             <?php if (isset($_SESSION['username'])) {
                                 echo '<div class="dropdown">
-                                <a class="border-success nav-link text-dark font" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="border-dark nav-link text-dark font" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <b class="hov"><i class="bi bi-gear"></i></b>
                                 </a>
                                 <div class="dropdown-menu border-dark" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="./useredit.php"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="../logout.php"><i class="fa fa-sign-out"></i>Logout</a>
+                                    <a class="dropdown-item" href="./logout.php"><i class="fa fa-sign-out"></i>Logout</a>
                                 </div>
                             </div>';
                             } else {
@@ -58,27 +58,11 @@ session_start();
 
                         <li>
                             <?php if (isset($_SESSION['username'])) {
-                                echo '';
+                                echo '<b><a class="nav-link text-dark px-4" href="./logout.php">Logout</a></b>';
                             }
                             ?>
                         </li>
-                        <li class="nav-item mx-4">
-                            <form class="d-flex">
-                                <?php
-                                $count = 0;
-                                if (isset($_SESSION['cart'])) {
-                                    $count = count($_SESSION['cart']);
-                                }
-                                ?>
-                                <?php if (isset($_SESSION['username'])) {
-                                    echo '<div class="text-center"><a class="btn btn-outline-dark d-flex" id="addtocartbtn" href="./mycart.php">Cart
-                                        <span><i class="bi-cart-fill me-1 cd"></i></span>' . '(' .   $count . ')' . '</a></div>';
-                                } else {
-                                    '<script> console.log();</script>';
-                                }
-                                ?></b></a>
-                            </form>
-                        </li>
+
                     </ul>
                 </div>
             </div>

@@ -84,7 +84,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link d-block font" href="./logout.php">
-                            <>Logout
+                            Logout
                         </a>
                     </li>
 

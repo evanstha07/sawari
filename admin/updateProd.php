@@ -4,7 +4,8 @@ session_start();
 
 extract($_POST);
 if (isset($update)) {
-	mysqli_query($conn, "UPDATE cars SET brand='$brand',model='$model', car_type='$cartype' where id='" . $_GET['pid'] . "'");
+	$price = $_POST['price'];
+	mysqli_query($conn, "UPDATE cars SET price = '$price' where id='" . $_GET['pid'] . "'");
 	$err = "<font color='blue'>Product updated </font>";
 	echo '<script>
 	alert("Product Updated");
@@ -64,9 +65,9 @@ include '../includes/aside.php'; ?>
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<div class="container d-flex justify-content-center mt-3">
-				<b class="font">
-					<h1>Update Existing Product</h1>
-				</b>
+
+				<h1 class="font">Update Existing Product</h1>
+
 			</div>
 		</section>
 
@@ -86,46 +87,29 @@ include '../includes/aside.php'; ?>
 					</div>
 					<div class="form-group">
 						<label for="brand">Brand:</label>
-						<select id="brand" name="brand" value="<?php echo $res['brand']; ?>">
-							<option value="Hyundai">Hyundai</option>
-							<option value="Volkswagen">Volkswagen</option>
-							<option value="Honda">Honda</option>
-							<option value="KIA">KIA</option>
-							<option value="Toyota">Toyota</option>
-							<option value="Skoda">Skoda</option>
-							<option value="Suzuki">Suzuki</option>
-							<option value="Nissan">Nissan</option>
-							<option value="Jeep">Jeep</option>
-						</select>
+						&nbsp;<?php echo $res['brand']; ?>
+
 					</div>
 					<div class="form-group mb-3">
-						<b>Select Product</b>
-
-					</div>
-					<div class="form-group">
-						<select id="car_type" value="<?php echo $res['car_type']; ?>" name="car_type">
-							<option value="Sedan">Sedan</option>
-							<option value="SUV">SUV</option>
-							<option value="Hatchbag">Hatchbag</option>
-						</select>
-					</div>
-
-					<div class="form-group">
 						<label for="model">Model:</label>
-						<input type="text" id="model" value="<?php echo $res['model']; ?>" name="model" required>
+						&nbsp;<?php echo $res['model']; ?>
+
+					</div>
+					<div class="form-group">
+						<label for="car_type">Car Type:</label>
+						&nbsp;<?php echo $res['car_type']; ?>
+
 					</div>
 
 					<div class="form-group">
 						<label for="year">Year:</label>
-						<input type="number" id="year" value="<?php echo $res['year']; ?>" name="year" min="1886" max="2099" required>
+						&nbsp;<?php echo $res['year']; ?>
 					</div>
 
 					<div class="form-group mb-3">
-						<b>Enter Price</b>
+						<label for="price">Enter New Price</label>
 						<input type="text" name="price" value="<?php echo $res['price']; ?>" class="mt-2 border-secondary form-control" />
 					</div>
-
-
 
 
 					<div class="text-white form-group mt-4">
@@ -136,8 +120,8 @@ include '../includes/aside.php'; ?>
 			</div>
 		</section>
 		<footer class="d-flex justify-content-center mt-5">
-			<strong>Copyright &copy; 2022
-				<a href="#">Cheers</a>.</strong>
+			<strong>Copyright &copy; 2023
+				<a href="#">Sawari</a>.</strong>
 		</footer>
 
 	</div>

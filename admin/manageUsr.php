@@ -86,12 +86,11 @@ include '../dbconn.php';
                     <table class="table table-hover table-bordered">
                         <Tr class="success">
                             <th>S.No</th>
-                            <th>User Name</th>
+                            <th>Fullname</th>
                             <th>Email</th>
                             <th>Username</th>
                             <th>Password</th>
                             <th>Delete</th>
-                            <th>Update</th>
                         </tr>
                         <?php
 
@@ -108,8 +107,6 @@ include '../dbconn.php';
                         ?>
 
                             <td><a href="javascript:DeleteUser('<?php echo $row['user_id']; ?>')" class="btn btn-danger">Delete</a></td>
-                            <td><a href="javascript:DeleteUser('<?php echo $row['user_id']; ?>')" class="btn btn-danger">Update</a></td>
-
                         <?php
                             echo "</tr>";
                             $i++;

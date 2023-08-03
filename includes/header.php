@@ -1,47 +1,90 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-         
-                    <a href="./index.php"><img class="img-fluid" src="./admin/uploads/products/cheers.jpg" style="width: 25%;" href="./index.php" alt="Cheers"></a>
-               
-                <a class="navbar-brand" href="#!">CHEERS !!</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about.php">About</a></li>
-                        <li class="nav-item">
-                            <?php if (isset($_SESSION['username'])) {
-                                echo'<a class="nav-link text-dark px-4">' . " " . $_SESSION['username'];'</a>';
-                            } else {
-                                echo '<a class="nav-link" href="./login.php">Login</a></li>';
-                            }
-                            ?>
-                            </a>
-                        </li>
-                        
-                        
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="./beer.php">Beer</a></li>
-                                <li><a class="dropdown-item" href="./beverage.php">Beverage</a></li>
-                                <li><a class="dropdown-item" href="./rum.php">Rum</a></li>
-                                <li><a class="dropdown-item" href="./vodka.php">Vodka</a></li>
-                                <li><a class="dropdown-item" href="./whisky.php">Whisky</a></li>
-                                <li><a class="dropdown-item" href="./wine.php">Wine</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
+<li class="nav-item mx-4">
+    <form class="d-flex">
+        <?php
+        $count = 0;
+        if (isset($_SESSION['cart'])) {
+            $count = count($_SESSION['cart']);
+        }
+        ?>
+        <?php if (isset($_SESSION['username'])) {
+            echo '<div class="text-center"><a class="btn btn-outline-dark d-flex" id="addtocartbtn" href="./mycart.php">Cart
+                                        <span><i class="bi-cart-fill me-1 cd"></i></span>' . '(' .   $count . ')' . '</a></div>';
+        } else {
+            '<script> console.log();</script>';
+        }
+        ?></b></a>
+    </form>
+</li>
+
+
+<?php
+session_start();
+?>
+
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container-fluid">
+            <div class="container px-4 w-75">
+                <div class="navbar-brand">
+                    <a href="./index.php"><img class="img-fluid" src="../assets//img///Sawari.PNG" style="width: 25%;" href="./index.php" alt="Sawari"></a>
                 </div>
             </div>
-        </nav>
+            <div class="container w-75" style="font-family:'Lora', serif; font-size:17px; margin-left: 150px;">
+                <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4 ">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark px-4" aria-current="page" href="./index.php"><b class="hov">Home</b></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-4" href="./about.php"> <b class="hov">About</b></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <?php if (isset($_SESSION['username'])) {
+                                echo
+                                '<a class="nav-link text-dark px-4">
+                                <b class="hov"><i class="bi bi-person"></i>' . " " . $_SESSION['username'];
+                                '</b></a>';
+                            } else {
+                                echo '<a class="nav-link a text-dark px-4 " href="./registration.php"><b class="hov">Register</b></a>';
+                            }
+                            ?>
+                            </b></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <!-- <a class="nav-link a text-dark px-4" href="./logout.php"><b class=" hov"> -->
+                            <?php if (isset($_SESSION['username'])) {
+                                echo '<div class="dropdown">
+                                <a class="border-success nav-link text-dark font" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b class="hov"><i class="bi bi-gear"></i></b>
+                                </a>
+                                <div class="dropdown-menu border-dark" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="./useredit.php"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+                                    <a class="dropdown-item" href="./logout.php"><i class="fa fa-sign-out"></i>Logout</a>
+                                </div>
+                            </div>';
+                            } else {
+                                echo '<a class="nav-link a text-dark px-4" href="./login.php"><b class="hov">Login</b></a>';
+                            }
+                            ?>
+                            </b></a>
+                        </li>
+
+                        <li>
+                            <?php if (isset($_SESSION['username'])) {
+                                echo '';
+                            }
+                            ?>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

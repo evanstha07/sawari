@@ -30,6 +30,9 @@ $car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc(
         <label for="return_date">Return Date:</label>
         <input type="date" name="return_date" id="return_date" required>
 
+        <label for="price">Price:</label>
+        <p name="price" id="price"><?php echo $car['price'] ?></p>
+
         <!-- <label for="extras">Additional Extras:</label>
         <input type="checkbox" name="extras[]" value="insurance">Insurance
         <input type="checkbox" name="extras[]" value="gps">GPS -->
