@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <select id="car_type" name="car_type">
                     <option value="Sedan">Sedan</option>
                     <option value="SUV">SUV</option>
-                    <option value="Hatchbag">Hatchbag</option>
+                    <option value="Hatchbag">Hatchback</option>
                 </select>
             </div>
 

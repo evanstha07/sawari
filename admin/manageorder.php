@@ -65,7 +65,7 @@ include '../dbconn.php';
 
 
                 <?php
-                $q = mysqli_query($conn, "SELECT * FROM orders");
+                $q = mysqli_query($conn, "SELECT * FROM bookings");
                 $rr = mysqli_num_rows($q);
                 if (!$rr) {
                     echo "<h2 style='color:red'>No any user exists !!!</h2>";

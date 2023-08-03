@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2023 at 12:51 PM
+-- Generation Time: Aug 03, 2023 at 05:48 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -75,7 +75,12 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`id`, `photo`, `brand`, `car_type`, `year`, `model`, `price`) VALUES
-(1, 'addSantro1.jpg', 'Hyundai', 'Sedan', '1990', 'Santro', 5000);
+(1, 'addSantro1.jpg', 'Hyundai', '', '1990', 'Santro', 5000),
+(3, 'kiaSuv1.jpg', 'KIA', 'SUV', '2002', 'Sonet', 4000),
+(4, 'kiaSuvSelt1.jpg', 'KIA', 'SUV', '2017', 'SELTOS', 6000),
+(5, 'toySed1.jpg', 'Toyota', 'Sedan', '2020', 'CAMRY HYBRID', 6500),
+(6, 'addHondaSedan1.jpg', 'Honda', 'Sedan', '2019', 'CITY', 5500),
+(7, 'volkHat1.jpg', 'Volkswagen', 'Hatchbag', '2018', 'POLO', 3000);
 
 -- --------------------------------------------------------
 
@@ -138,7 +143,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -67,7 +67,7 @@
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">
             <!-- img SRC KO VALUE = path of ceo 1 pic -->
-            <img src="./assets//img//nischal.jpg" alt="CEO1" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="./assets//img//ourTeam/nischal.jpg" alt="CEO1" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Nischal Dahal</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item">
@@ -86,7 +86,7 @@
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="./assets//img//Evan.jpg" alt="CEO2" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="./assets//img//ourTeam/Evan.jpg" alt="CEO2" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Evan Shrestha</h5><span class="small text-uppercase text-muted">Product Designer</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -101,7 +101,7 @@
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="./assets//img//Sanjay.jpg" alt="CEO3" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="./assets//img//ourTeam/Sanjay.jpg" alt="CEO3" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Sanjay Khadka</h5><span class="small text-uppercase text-muted">Lead Engineer</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -116,7 +116,7 @@
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="./assets//img//Bimochan.jpg" alt="CEO4" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="./assets//img//ourTeam/Bimochan.jpg" alt="CEO4" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Bimochan Bajimaya</h5><span class="small text-uppercase text-muted">UI/UX - Lead</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
