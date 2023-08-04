@@ -20,7 +20,7 @@ $car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc(
 <body>
     <h1>Car Booking</h1>
 
-    <form method="POST" action="./bookCardb.php?pid=<?php echo $cid; ?>">
+    <form method="POST" action="./bookCardb.php?pid=<?php echo $cid; ?>&price=<?php echo $car['price']; ?>">
         <label for="car">Your booking:</label>
         <p><?php echo $car['brand'] . " " . $car['model']; ?></p>
 

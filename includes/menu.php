@@ -8,7 +8,7 @@ session_start();
             <div class="container px-4 w-75">
                 <div class="navbar-brand">
                     <a href="./index.php"><img class="img-fluid" src="./assets/img/Sawari.PNG" style="width: 11%;" href="./index.php" alt="Sawari"></a>
-                    <a href="./index.php"><b class="font">Sawari</b></a>
+                    <!-- <a href="./index.php"><b class="font">Sawari</b></a> -->
 
                 </div>
             </div>

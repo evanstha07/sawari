@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-5 d-flex justify-content-center m-auto">
                         <div class="card mb-5 mt-5 wid text-black border-dark" style="border-radius: 25px;">
                             <div class="card-body">
-                                <form method="POST" action="booking.php?pid=<?php echo $product['id']; ?>">
+                                <form method="POST" action="booking.php?pid=<?php echo $product['id']; ?>&price=<?php echo $product['price'] ?>">
                                     <img class="card-img-top center" width="10%" style="border-radius: 25px;" src="./admin/uploads/products/<?php echo $product['photo']; ?>" alt="" />
                                     <h1 class="text-center"><?php echo $product['brand'] . " " . $product['model']; ?></h1>
                                     <!-- <input type="hidden" id="pname" name="pname" value="<?php echo $product['model']; ?>"> -->

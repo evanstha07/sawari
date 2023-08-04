@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2023 at 05:48 PM
+-- Generation Time: Aug 04, 2023 at 09:32 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -48,11 +48,21 @@ INSERT INTO `admin` (`id`, `user`, `pass`) VALUES
 
 CREATE TABLE `bookings` (
   `id` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
-  `ordered_by` int(11) NOT NULL,
-  `address` int(11) NOT NULL,
-  `phone` int(11) NOT NULL
+  `car` varchar(255) DEFAULT NULL,
+  `pickup_date` date DEFAULT NULL,
+  `return_date` date DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `car`, `pickup_date`, `return_date`, `username`, `price`) VALUES
+(1, 'Hyundai Santro', '2023-08-10', '2023-08-11', 'neeschal', 5000.00),
+(2, 'Volkswagen POLO', '2023-08-05', '2023-08-07', 'neeschal', 3000.00),
+(3, 'Volkswagen POLO', '2023-08-11', '2023-08-26', 'neeschal', 3000.00);
 
 -- --------------------------------------------------------
 
@@ -105,7 +115,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `fullname`, `address`, `phone`, `email`, `username`, `password`) VALUES
 (4, 'sanjay khadka', 'golfutar', '9861497286', 'sanjaykhadka@tuicms.edu.np', 'kSanjay', '$2y$10$CiHwN3BRZc/TNNrrkRFzHua41q6jz5N.bcjZGVKglq0mY8QEurj.K'),
 (5, 'Nischal Dahal', 'Chabahil', '9805940865', 'haha@gmail.com', 'nischal101010', '$2y$10$BMMfg61510yI3aLGNvNmBeZHlVsDdSXhctQSog0wcbRSYBQp.BRK.'),
-(6, 'Shushanta Dhungana', 'Ramhiti', '9865062545', 'shushantadhungana0@gmail.com', 'matrix', '$2y$10$7kPXLHARwyJUYbMvXK.KuejuNtonGqWyENgTPXBnu6LlfbDmdYUmW');
+(6, 'Shushanta Dhungana', 'Ramhiti', '9865062545', 'shushantadhungana0@gmail.com', 'matrix', '$2y$10$7kPXLHARwyJUYbMvXK.KuejuNtonGqWyENgTPXBnu6LlfbDmdYUmW'),
+(7, 'Neeschal', 'Newyork', '9746639988', 'neeschal@gmail.com', 'neeschal', '$2y$10$u6qTxDuJ2L/VVmVT0fI72O0Ne4z1GY1yLHUVWlazWgGPiVoK3UN2S'),
+(8, 'Evan Shrestha', 'Bhaktapur', '9869037188', 'evanstha@gmail.com', 'evan1234', '$2y$10$D6mGJoWqmbCHTnMBYmGLsuvURjT6WPhM57D9SbVdNc.IAJcVyMLIK');
 
 --
 -- Indexes for dumped tables
@@ -115,6 +127,12 @@ INSERT INTO `users` (`user_id`, `fullname`, `address`, `phone`, `email`, `userna
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bookings`
+--
+ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -140,6 +158,12 @@ ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `bookings`
+--
+ALTER TABLE `bookings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
@@ -149,7 +173,7 @@ ALTER TABLE `cars`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -5,6 +5,7 @@ include('./dbconn.php');
 // Check if 'pid' exists in the URL parameters
 if (isset($_GET['pid'])) {
     $cid = $_GET['pid'];
+    $price = $_GET['price'];
     $car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,7 +13,7 @@ if (isset($_GET['pid'])) {
         $selectedCar = $car['brand'] . " " . $car['model'];
         $pickupDate = $_POST["pickup_date"];
         $returnDate = $_POST["return_date"];
-        $price = $_POST["price"];
+        // $price = $_POST["price"];
 
         // Check if the user is logged in before accessing the session variable
         $username = isset($_SESSION["username"]) ? $_SESSION["username"] : "Guest";
