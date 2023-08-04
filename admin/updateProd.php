@@ -5,7 +5,14 @@ session_start();
 extract($_POST);
 if (isset($update)) {
 	$price = $_POST['price'];
-	mysqli_query($conn, "UPDATE cars SET price = '$price' where id='" . $_GET['pid'] . "'");
+	// $fuel_type = $_POST['fuel_type'];
+	$mileage = $_POST['mileage'];
+	// $transmission = $_POST['transmission'];
+	$seat_capacity = $_POST['seat_capacity'];
+    $boot_capacity = $_POST['boot_capacity'];
+
+	mysqli_query($conn, "UPDATE cars SET price = $price, mileage = $mileage, seat_capacity = $seat_capacity, boot_capacity= $boot_capacity where id='" . $_GET['pid'] . "'");
+
 	$err = "<font color='blue'>Product updated </font>";
 	echo '<script>
 	alert("Product Updated");
@@ -27,7 +34,7 @@ include '../includes/aside.php'; ?>
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Cheers | Update Product</title>
+	<title>Sawari | Update Product</title>
 	<link rel="icon" type="image/x-icon" href="../image/kisanarea.png" />
 
 	<!-- Google Font: Source Sans Pro -->
@@ -110,6 +117,40 @@ include '../includes/aside.php'; ?>
 						<label for="price">Enter New Price</label>
 						<input type="text" name="price" value="<?php echo $res['price']; ?>" class="mt-2 border-secondary form-control" />
 					</div>
+
+					<!-- <--<div class="form-group mb-3">
+						<label for="fuel_type">Fuel Type</label> --> 
+					   <!-- <div class="form-group mb-3">
+							<label for="fuel_type">Fuel Type:</label>
+							<select id="fuel_type" name="fuel_type" required>
+								<option value="diesel">Diesel</option>
+								<option value="petrol">Petrol</option>
+							</select>
+						</div> -->
+
+					<div class="form-group mb-3">
+						<label for="mileage">Mileage</label>
+						<input type="text" name="mileage" value="<?php echo $res['mileage']; ?>" class="mt-2 border-secondary form-control" />
+					</div>
+
+					<!-- <div class="form-group mb-3">
+						<label for="transmission">Transmission</label>
+						<input type="text" name="transmission" value="<?php echo $res['transmission']; ?>" class="mt-2 border-secondary form-control" />
+					</div> -->
+
+					
+					
+					<div class="form-group mb-3">
+						<label for="seat_capacity">Seat Capacity</label>
+						<input type="text" name="seat_capacity" value="<?php echo $res['seat_capacity']; ?>" class="mt-2 border-secondary form-control" />
+					</div>
+
+
+					<div class="form-group mb-3">
+						<label for="boot_capacity">Boot Capacity</label>
+						<input type="text" name="boot_capacity" value="<?php echo $res['boot_capacity']; ?>" class="mt-2 border-secondary form-control" />
+					</div>
+
 
 
 					<div class="text-white form-group mt-4">

@@ -130,7 +130,7 @@ include '../dbconn.php';
         function DeleteProducts(id) {
             if (confirm("Do you want to delete this product?")) {
                 alert("Product Deleted");
-                window.location.href = "deleteprod.php?id=" + id;
+                window.location.href = "productDelete.php?id=" + id;
             }
         }
     </script>

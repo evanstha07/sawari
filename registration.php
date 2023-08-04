@@ -120,10 +120,14 @@
             </form>
 
         </div>
-        <footer class="d-flex justify-content-center mt-5">
+        <!-- <footer class="d-flex justify-content-center mt-5">
             <div class="footer">
                 <p class="font text-muted mb-0 ">&copy; 2023, Sawari. All rights reserved.</p>
-            </div>
+            </div> -->
+
+            <?php
+    require './includes/footer.php';
+    ?>
 
 
     </body>

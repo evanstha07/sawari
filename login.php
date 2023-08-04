@@ -16,7 +16,6 @@
     <?php
     require_once "dbconn.php";
     include "./includes/menu.php";
-
     if (isset($_POST["Login"])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -24,12 +23,11 @@
         $sql = "SELECT username, password FROM users WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
         if ($user && password_verify($password, $user['password'])) {
             // Password is correct, user is authenticated
             // You can set sessions or perform other actions here
-            echo "<script>alert('Login Successful');window.location.href='./index.php'</script>";
             $_SESSION['username'] = $username;
+            echo "<script>window.location.href='./index.php'</script>";
         } else {
             echo "<div class='alert alert-danger'> Invalid username or password</div>";
         }

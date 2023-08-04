@@ -11,6 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $model = $_POST['model'];
     $year = $_POST['year'];
     $price = $_POST['price'];
+    $mileage = $_POST['mileage'];
+    $fuel_type = $_POST['fuel_type'];
+    // $transmission = $_POST['transmission'];
+    $seat_capacity = $_POST['seat_capacity'];
+    $boot_capacity = $_POST['boot_capacity'];
+
 
     try {
         $target_path = "uploads/products/";
@@ -22,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '<script>console.log("File upload failed, please try again!");</script>';
         }
 
-        $query = mysqli_query($conn, "INSERT INTO cars (photo,brand,car_type,model,year,price) VALUES ('$photo','$brand','$car_type','$model','$year', '$price')");
+        $query = mysqli_query($conn, "INSERT INTO cars (photo,brand,car_type,model,year,price,mileage,fuel_type, seat_capacity,boot_capacity)
+        VALUES ('$photo','$brand','$car_type','$model','$year', '$price', '$mileage', '$fuel_type', '$seat_capacity', '$boot_capacity')");
     } catch (Exception $e) {
         $message = 'Unable to add new product.' . $e;
         throw new Exception('Unable to save details.', 0, $e);
@@ -85,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="form-group">
                 <label>Photo URL</label>
-                <input type="file" name="photo" id="photo" class="" required placeholder="Photo URL">
+                <input type="file" name="photo" id="photo" class="" required placeholder="Photo URL" multiple>
             </div>
 
             <div class="form-group">
@@ -101,6 +108,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="price">Price:</label>
                 <input type="number" id="price" name="price" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Mileage:</label>
+                <input type="number" id="mileage" name="mileage" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fuel_type">Fuel Type:</label>
+                    <select id="fuel_type" name="fuel_type" required>
+                        <option value="diesel">Diesel</option>
+                        <option value="petrol">Petrol</option>
+                    </select>
+            </div>
+
+
+            <!-- <div class="form-group">
+                <label for="transmission">Transmission:</label>
+                <input type="text" id="transmission" name="transmission" required>
+            </div> -->
+
+            <div class="form-group">
+                <label for="seat_capacity">Seat Capacity:</label>
+                <input type="number" id="seat_capacity" name="seat_capacity" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="boot_capacity">Boot Capacity:</label>
+                <input type="number" id="boot_capacity" name="boot_capacity" min="0" step="0.01" required>
             </div>
 
             <div class="form-group">

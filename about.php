@@ -134,11 +134,15 @@
   <!--------------- MAIN --------------->
 
   <!-- footer -->
-  <footer class="bg-light pb-5">
+  <!-- <footer class="bg-light pb-5">
     <div class="container text-center">
       <p class="font text-muted mb-0">&copy; Copyrights: Sawari. All rights reserved.</p>
     </div>
-  </footer>
+  </footer> -->
+
+  <?php
+    require './includes/footer.php';
+    ?>
   <!-- end of footer -->
 
   <!--jquery, popper, bootstrap and font awesome js -->

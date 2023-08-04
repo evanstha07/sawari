@@ -1,8 +1,8 @@
 <?php
-session_start();
-include('./dbconn.php');
-$cid = $_GET['pid'];
-$car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc();
+    session_start();
+    include('./dbconn.php');
+    $cid = $_GET['pid'];
+    $car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
