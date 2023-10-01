@@ -149,7 +149,7 @@ include '../dbconn.php'
     </div>
     <!-- /.control-sidebar -->
     <footer class="d-flex justify-content-center mt-5">
-      <strong>Copyright &copy; 2022
+      <strong>Copyright &copy; 2023
         <a href="#">Sawari</a>.</strong>
     </footer>
 

@@ -39,11 +39,11 @@ session_start();
                                         <b><?php echo $_SESSION['username']; ?></b>
                                     </a>
 
-                                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> -->
-                                        <!-- <a class="dropdown-item" href="#">Profile</a> -->
-                                        <!-- <a class="dropdown-item" href="#">Bookings</a> -->
-                                        <!-- <a class="dropdown-item" href="#">History</a> -->
-                                    <!-- </div> -->
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Profile</a>
+                                        <a class="dropdown-item" href="./mybooking.php">Bookings</a>
+                                        <a class="dropdown-item" href="#">History</a>
+                                    </div> 
                                     
                                 </div>
                             <?php } else { ?>

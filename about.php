@@ -33,27 +33,43 @@
 
   <div class="bg-white py-5">
     <div class="container py-5">
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="font-weight-light">Sawari Feature 1</h2>
-          <p class="font-italic text-muted mb-4">Feature 1</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
-        </div>
-        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-      </div>
-      <div class="row align-items-center">
+
+    <div class="row align-items-center">
         <div class="col-lg-5 px-5 mx-auto">
-          <img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt="" class="img-fluid mb-4 mb-lg-0">
+        <img src="./assets//img//aboutSecondimg.jpg" alt="Image Description" class="custom-image" style="width:115%; height:300%; border-radius:50px">
+
+          <!-- <img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt="" class="img-fluid mb-4 mb-lg-0"> -->
         </div>
         <div class="col-lg-6">
-          <h2 class="font-weight-light">Sawari Feature 2</h2>
-          <p class="font-italic text-muted mb-4">Feature 2</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+          <h2 class="font-weight-light">Choice with Ease</h2>
+          <div href="#">Diverse Vehicle Selection
+          <p class="font-italic text-muted mb-4">Pick from a wide range of vehicles, from sedans to SUVs.
+            Find your ideal ride for solo trips or family vacations.</p>
+          </div>
+          <div href="#">Prioritizing Your Safety
+          <p class="font-italic text-muted mb-4">Your Safety Matters Most. 
+            Our vehicles undergo strict safety checks and regular maintenance for your peace of mind.</p>
+          </div>
+          <div href="#">Clearly Stated Costs
+          <p class="font-italic text-muted mb-4">Clear, Honest Pricing. No Hidden Fees</p>
+          </div>
+          <!-- <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">learn More</a> -->
         </div>
       </div>
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 order-2 order-lg-1">
+         <br><br> <h2 class="font-weight-light" >Our Services</h2>
+          <p class="font-italic text-muted mb-4">Here at Sawari, you will enjoy the exquisite and value-adding car rental services that make your travel safe, fun, and happening.
+            We offer the best rental car in Nepal- luxurious or under budget- through our experienced drivers. Choose us for your car rental needs, and we will surely change your perception of rental cars in Nepal.</p>
+            <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">24/7 Services <br>Premium and Hybrid cars<br>Exclusive Memberships<br></a>
+        </div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      </div>    
     </div>
   </div>
 
   <div class="bg-light py-5">
-    <div class="container py-5">
+    <div class="container py-2">
       <div class="row mb-4">
         <div class="col-lg-5">
           <h2 class="display-4 font-weight-light">Our team</h2>
