@@ -109,7 +109,6 @@
                         $i++;
                     }
                     ?>
-
                 </table>
             <?php } ?>
         </section>
