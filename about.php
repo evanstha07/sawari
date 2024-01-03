@@ -71,13 +71,13 @@
             <h5 class="mb-0">Nischal Dahal</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item">
-                <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/pompous.nischal" class="social-link"><i class="fa fa-facebook-f"></i></a>
               </li>
               <li class="list-inline-item">
                 <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
               </li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/nischallll____/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/nischal-dahal-250525221/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -89,10 +89,10 @@
             <img src="./assets//img//ourTeam/Evan.jpg" alt="CEO2" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Evan Shrestha</h5><span class="small text-uppercase text-muted">Product Designer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/ebhasink" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/stha.e08/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/evan-bhasink-s-30a78b281/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -104,10 +104,10 @@
             <img src="./assets//img//ourTeam/Sanjay.jpg" alt="CEO3" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Sanjay Khadka</h5><span class="small text-uppercase text-muted">Lead Engineer</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/sanjay1khadka" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/sanjay-khadka-99360a221/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -119,10 +119,10 @@
             <img src="./assets//img//ourTeam/Bimochan.jpg" alt="CEO4" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Bimochan Bajimaya</h5><span class="small text-uppercase text-muted">UI/UX - Lead</span>
             <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/bimochanb37" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/bimo_as_337/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/bimochan-bajimaya-861b48158/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -141,8 +141,8 @@
   </footer> -->
 
   <?php
-    require './includes/footer.php';
-    ?>
+  require './includes/footer.php';
+  ?>
   <!-- end of footer -->
 
   <!--jquery, popper, bootstrap and font awesome js -->
