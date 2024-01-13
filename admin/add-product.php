@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $mileage = $_POST['mileage'];
     $fuel_type = $_POST['fuel_type'];
-    // $transmission = $_POST['transmission'];
     $seat_capacity = $_POST['seat_capacity'];
     $boot_capacity = $_POST['boot_capacity'];
 
@@ -117,10 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="form-group">
                 <label for="fuel_type">Fuel Type:</label>
-                    <select id="fuel_type" name="fuel_type" required>
-                        <option value="diesel">Diesel</option>
-                        <option value="petrol">Petrol</option>
-                    </select>
+                <select id="fuel_type" name="fuel_type" required>
+                    <option value="diesel">Diesel</option>
+                    <option value="petrol">Petrol</option>
+                </select>
             </div>
 
 
@@ -145,24 +144,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 
-    <!-- <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script>
-        $.widget.bridge("uibutton", $.ui.button);
-    </script>
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script src="dist/js/adminlte.js"></script>
-    <script src="dist/js/pages/dashboard.js"></script> -->
 </body>
 
 </html>

@@ -75,7 +75,7 @@ include '../dbconn.php';
                         function DeleteUser(id) {
                             if (confirm("Do you want to delete this user?")) {
                                 alert("User Deleted Successfully")
-                                window.location.href = "deleteUsr.php?id=" + id;
+                                window.location.href = admin / deleteprod.php
                             }
                         }
                     </script>

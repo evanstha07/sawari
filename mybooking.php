@@ -1,4 +1,3 @@
-
 <html lang="en">
 
 <head>
@@ -36,15 +35,15 @@
 </head>
 
 <body class="hold-transition sidebar-mini font">
-<?php
+    <?php
     require './includes/menu.php';
     ?>
-<?php 
-     include('./dbconn.php');
-     $username = $_SESSION['username'];
-      $mybookings = mysqli_query($conn, "SELECT * from bookings WHERE username = '$username'");
-   
-?>
+    <?php
+    include('./dbconn.php');
+    $username = $_SESSION['username'];
+    $mybookings = mysqli_query($conn, "SELECT * from bookings WHERE username = '$username'");
+
+    ?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -64,27 +63,24 @@
             </div>
 
             <?php
-            
+
             $rr = mysqli_num_rows($mybookings);
             if (!$rr) {
                 echo "<h2 style='color:red'>No bookings found !!!</h2>";
             } else {
             ?>
-                <h2>All bookings</h2>
+                <h2 class="d-flex m-auto justify-content-center mb-2 mt-3">Your bookings</h2>
 
                 <table class="table table-bordered table-hover mb-2">
-                    <tr>
-                        <th colspan="7"><a href="add-product.php">Add New Product</a></th>
-                    </tr>
+
                     <tr class=" success">
                         <th>S.No</th>
                         <!-- <th>Name</th> -->
                         <th>Car</th>
-                        <th>Return Date</th>
                         <th>Pickup Date</th>
+                        <th>Return Date</th>
                         <th>Price</th>
                         <th>Delete</th>
-                        <th>Update</th>
                     </tr>
                     <?php
 
@@ -93,29 +89,28 @@
                         echo "<tr>";
                         echo "<td>" . $i . "</td>";
                         // echo "<td>" . $row['name'] . "</td>";
+                        echo "<td>" . $row['car'] . "</td>";
                     ?>
-                        <td class="w-25 ">
-                            <?php
-                            echo "<td>" . $row['car'] . "</td>";
-                            echo "<td>" . $row['return_date'] . "</td>";
-                            echo "<td>" . $row['pickup_date'] . "</td>";
-                            echo "<td>" . $row['price'] . "</td>";
-                            ?>
+                        <?php
+                        echo "<td>" . $row['pickup_date'] . "</td>";
+                        echo "<td>" . $row['return_date'] . "</td>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        ?>
                         <td><a href="javascript:DeleteProducts('<?php echo $row['id']; ?>')" class="btn btn-danger">Delete</a></td>
 
+
                     <?php
-                        echo "<td><a href='updateProd.php?page=updateProd&pid=" . $row['id'] . "' class='btn btn-secondary'>Update</a></td>";
-                        echo "</tr>";
+
                         $i++;
                     }
                     ?>
                 </table>
             <?php } ?>
         </section>
-        <footer class="d-flex justify-content-center mt-5">
-            <strong>Copyright &copy; 2022
-                <a href="#">Sawari</a>.</strong>
+        <footer class="fixed-bottom d-flex justify-content-center mt-5">
+            <strong>Copyright &copy; 2022 <a href="#">Sawari</a>.</strong>
         </footer>
+
     </div>
 
     <?php
@@ -123,9 +118,9 @@
     ?>
     <script>
         function DeleteProducts(id) {
-            if (confirm("Do you want to delete this product?")) {
-                alert("Product Deleted");
-                window.location.href = "productDelete.php?id=" + id;
+            if (confirm("Do you want to delete this booking?")) {
+                alert("Booking Deleted");
+                window.location.href = "deletebooking.php?id=" + id;
             }
         }
     </script>
