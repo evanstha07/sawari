@@ -63,28 +63,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <img class="card-img-top center" width="10%" style="border-radius: 25px;" src="./admin/uploads/products/<?php echo $product['photo']; ?>" alt="" />
                                     <h1 class="text-center"><?php echo $product['brand'] . " " . $product['model']; ?></h1>
                                     <!-- <input type="hidden" id="pname" name="pname" value="<?php echo $product['model']; ?>"> -->
-                                    <h4 class="text-center">Rs.<?php echo $product ['price'] ;?> per day</h4>
+                                    <h4 class="text-center">Rs.<?php echo $product['price']; ?> per day</h4>
                                     <div class="text-center Reveal-block-body" style="display:flex; justify-content:center; flex-direction:column">
                                         <h5 class="mb-2"> Year: <?php echo $product['year']; ?></h5>
                                         <div style="display:flex; justify-content:space-between">
                                             <label for="">Fuel Type: </label>
-                                        <h5 class="mb-2"><?php echo $product['fuel_type']; ?></h5>
+                                            <h5 class="mb-2"><?php echo $product['fuel_type']; ?></h5>
                                         </div>
                                         <div style="display:flex; justify-content:space-between">
                                             <label for="">Mileage: </label>
-                                        <h5 class="mb-2"><?php echo $product['mileage']; ?></h5>
+                                            <h5 class="mb-2"><?php echo $product['mileage']; ?></h5>
                                         </div>
                                         <div style="display:flex; justify-content:space-between">
                                             <label for="">Seat Capacity: </label>
-                                        <h5 class="mb-2"><?php echo $product['seat_capacity']; ?></h5>
+                                            <h5 class="mb-2"><?php echo $product['seat_capacity']; ?></h5>
                                         </div>
                                         <!-- <div style="display:flex;justify-content:space-between"> -->
-                                            <!-- <label for="">Transmission: </label> -->
+                                        <!-- <label for="">Transmission: </label> -->
                                         <!-- <h5 class="mb-2"><?php echo $product['transmission']; ?></h5> -->
                                         <!-- </div> -->
                                         <div style="display:flex;justify-content:space-between">
                                             <label for="">Boot Capacity: </label>
-                                        <h5 class="mb-2"><?php echo $product['boot_capacity']; ?></h5>
+                                            <h5 class="mb-2"><?php echo $product['boot_capacity']; ?></h5>
                                         </div>
                                     </div>
                                     <div>

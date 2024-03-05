@@ -36,7 +36,7 @@ include('./dbconn.php');
                         </tr>
                     </thead>
                     <tbody>
-                        <form method="POST" action="./addtocart.php">
+                        <form method="POST" action="booking.php">
                             <?php
                             $mysqli = mysqli_connect("localhost", "root", "", "sawari");
                             if (isset($_GET['search'])) {
@@ -53,19 +53,9 @@ include('./dbconn.php');
                                             <td><?= $featuredProd['model']; ?></td>
                                             <td><?= $featuredProd['year']; ?></td>
                                             <td><?= $featuredProd['price']; ?></td>
-                                            <td><?php if (isset($_SESSION['username'])) {
-                                                    echo '<button type="submit" name="Add_To_cart" class="btn btn navigation text-white">
-										Add to cart
-									</button>';
-                                                } else {
-                                                    echo
-                                                    '<a href="./login.php" name="" class="btn navigation text-white">
-										Please Login
-									</a>';
-                                                }
-                                                ?>
-                                                <input type="hidden" name="Item_name" value="<?php echo $featuredProd['brand'] . $featuredProd['model']; ?>">
-                                                <input type="hidden" name="price" value="<?php echo $featuredProd['price']; ?>">
+
+                                            <input type="hidden" name="Item_name" value="<?php echo $featuredProd['brand'] . $featuredProd['model']; ?>">
+                                            <input type="hidden" name="price" value="<?php echo $featuredProd['price']; ?>">
                                             </td>
                                         </tr>
                                     <?php

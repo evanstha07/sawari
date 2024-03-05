@@ -34,9 +34,8 @@ session_start();
                                     </a>
 
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Profile</a>
-                                        <a class="dropdown-item" href="#">Bookings</a>
-                                        <a class="dropdown-item" href="#">History</a>
+
+                                        <a class="dropdown-item" href="./mybooking.php">Bookings</a>
                                     </div>
 
                                 </div>

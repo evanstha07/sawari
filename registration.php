@@ -33,6 +33,17 @@
             array_push($errors, "Please fill all the fields");
         }
 
+
+        if (!preg_match("/^\d{10}$/", $Phone)) {
+            array_push($errors, "Please enter a valid 10-digit phone number");
+        }
+
+        if (!preg_match("/^[A-Z][a-zA-Z]*$/", $Fullname)) {
+            array_push($errors, "Please enter a valid full name.");
+        }
+
+
+
         if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Please enter a valid email address");
         }
@@ -45,6 +56,18 @@
             array_push($errors, "Password does not match");
         }
         require_once "dbconn.php";
+
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql)) {
+            mysqli_stmt_bind_param($stmt, "s", $Username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            $rowCount = mysqli_num_rows($result);
+            if ($rowCount > 0) {
+                array_push($errors, "Username already exists");
+            }
+        }
 
         $sql = "SELECT * FROM users WHERE email = '$Email'";
         $result = mysqli_query($conn, $sql);
@@ -125,9 +148,9 @@
                 <p class="font text-muted mb-0 ">&copy; 2023, Sawari. All rights reserved.</p>
             </div> -->
 
-            <?php
-    require './includes/footer.php';
-    ?>
+        <?php
+        require './includes/footer.php';
+        ?>
 
 
     </body>

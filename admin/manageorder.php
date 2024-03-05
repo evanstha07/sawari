@@ -45,9 +45,7 @@ include '../dbconn.php';
     include '../includes/aside.php';
     ?>
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container d-flex justify-content-center font">
                 <b>
@@ -55,10 +53,8 @@ include '../dbconn.php';
                 </b>
             </div>
 
-            <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <!-- SELECT2 EXAMPLE -->
                     <div class="card card-default">
                     </div>
                 </div>

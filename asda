@@ -1,0 +1,35 @@
+<?php
+session_start();
+include('./dbconn.php');
+
+// Check if 'pid' exists in the URL parameters
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $cid = $_POST['cid'];
+    $car = mysqli_query($conn, "SELECT * FROM cars WHERE id = '$cid'")->fetch_assoc();
+    // Fetch data from the form
+    $selectedCar = $car['brand'] . " " . $car['model'];
+    $currentDate = date("Y-m-d");
+    $pickupDate = $_POST["pickup_date"];
+    $returnDate = $_POST["return_date"];
+    $price = $car['price'];
+    $date1 = new DateTime($pickupDate);
+    $date2 = new DateTime($returnDate);
+    $duration = $date1->diff($date2);
+    $differenceInDays = $duration->days;
+    $finalPrice = $differenceInDays * $price;
+
+    if (($pickupDate < $currentDate) && ($returnDate < $currentDate)) {
+        echo '<script>
+            alert("Invalid date!!!");window.location.href="index.php";
+            </script>';
+    } else {
+        $username = $_SESSION["username"];
+        $sql = "INSERT INTO bookings (car, pickup_date, return_date, username, price) VALUES ('$selectedCar', '$pickupDate', '$returnDate', '$username','$finalPrice')";
+        if ($conn->query($sql) === true) {
+            echo '<script>alert("Booking successfull");
+            window.location.href="index.php";</script>';
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+}

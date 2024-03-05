@@ -1,5 +1,5 @@
 <section class="">
-    <div class="container px-4 px-lg-5 mt-0">
+    <div class=" container px-4 px-lg-5 mt-0">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div class="input-group" style=" display:inline-flex; justify-content:flex-end; align-items:right; margin:40px;">
 
@@ -55,7 +55,6 @@
                     </div>
                 </div>
             <?php } ?>
-
         </div>
     </div>
 </section>
